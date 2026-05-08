@@ -8,18 +8,19 @@ class PostsView extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       body: SafeArea(
-        child: Column(
-          crossAxisAlignment: CrossAxisAlignment.end,
-          children: [
-            CustomAppBar(
-              title: 'المنشــــــورات',
-              firstIcon: Icons.search,
-              secondIcon: Icons.add,
-            ),
-          ],
+        child: Padding(
+          padding: const EdgeInsets.all(12.0),
+          child: Column(
+            children: [
+              CustomAppBar(
+                title: 'المنشــــــورات',
+                firstIcon: Icons.search,
+                secondIcon: Icons.add_outlined,
+              ),
+            ],
+          ),
         ),
       ),
     );
   }
 }
-
