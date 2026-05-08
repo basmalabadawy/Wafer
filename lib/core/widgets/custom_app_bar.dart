@@ -23,15 +23,9 @@ class CustomAppBar extends StatelessWidget {
           style: Styles.textStyle30.copyWith(fontWeight: FontWeight.bold),
         ),
         Spacer(),
-        Icon(firstIcon, size: 30, color: Colors.black),
+        Icon(firstIcon, size: 28, color: Colors.black.withOpacity(0.7)),
         SizedBox(width: 8),
-        Container(
-          decoration: BoxDecoration(
-            color: AppColors.primaryText,
-            borderRadius: BorderRadius.circular(30),
-          ),
-          child: Icon(secondIcon, size: 30, color: AppColors.fourthText),
-        ),
+        Icon(secondIcon, size: 28, color: Colors.black.withOpacity(0.7)),
       ],
     );
   }
