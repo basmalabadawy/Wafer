@@ -131,28 +131,93 @@ class ProfileView extends StatelessWidget {
                 const SizedBox(height: 24),
 
                 /// Description Title
-                const Align(
-                  alignment: Alignment.centerRight,
-                  child: Text('وصف الجمعية الخيرية', style: Styles.textStyle18),
-                ),
+                // const Align(
+                //   alignment: Alignment.centerRight,
+                //   child: Text('وصف الجمعية الخيرية', style: Styles.textStyle18),
+                // ),
 
-                const SizedBox(height: 12),
+                // const SizedBox(height: 12),
 
                 /// Description Box
-                Container(
+                // Container(
+                //   width: double.infinity,
+                //   padding: const EdgeInsets.all(16),
+                //   decoration: BoxDecoration(
+                //     border: Border.all(color: Colors.grey.shade400),
+                //     borderRadius: BorderRadius.circular(24),
+                //   ),
+                //   child: const Text(
+                //     'أنشئت مؤسسة مصر الخير عام 2007 بهدف الاستمرار لأكثر من 500 عام وذلك بالاستناد على هيكل مؤسسي لا يعتمد على الأشخاص بل على العمل المؤسسي، حيث تعمل بأحدث منهجيات العمل المؤسسي التنموي والحرفية من أجل تنمية الإنسان في خمس مجالات أساسية (التكافل الاجتماعي والتعليم والصحة والبحث العلمي ومناحي الحياة) تحت مظلة واحدة هي مؤسسة مصر الخير وتعتبر مؤسسة مصر الخير مؤسسة أهلية غير هادفة للربح مشهرة تحت رقم 555 لعام 2007 طبقاً لأحكام القانون رقم 84 لسنة 2002 وتهدف إلى خدمة وتطوير وتمكين المجتمع المصري من أجل العودة للحياة الكريمة في جميع ربوع مصر.',
+                //     textAlign: TextAlign.right,
+                //     style: TextStyle(
+                //       fontSize: 16,
+                //       height: 1.8,
+                //       color: AppColors.tertiaryText,
+                //     ),
+                //   ),
+                // ),
+                const SizedBox(height: 30),
+
+                /// Save Button
+                SizedBox(
                   width: double.infinity,
-                  padding: const EdgeInsets.all(16),
-                  decoration: BoxDecoration(
-                    border: Border.all(color: Colors.grey.shade400),
-                    borderRadius: BorderRadius.circular(24),
-                  ),
-                  child: const Text(
-                    'أنشئت مؤسسة مصر الخير عام 2007 بهدف الاستمرار لأكثر من 500 عام وذلك بالاستناد على هيكل مؤسسي لا يعتمد على الأشخاص بل على العمل المؤسسي، حيث تعمل بأحدث منهجيات العمل المؤسسي التنموي والحرفية من أجل تنمية الإنسان في خمس مجالات أساسية (التكافل الاجتماعي والتعليم والصحة والبحث العلمي ومناحي الحياة) تحت مظلة واحدة هي مؤسسة مصر الخير وتعتبر مؤسسة مصر الخير مؤسسة أهلية غير هادفة للربح مشهرة تحت رقم 555 لعام 2007 طبقاً لأحكام القانون رقم 84 لسنة 2002 وتهدف إلى خدمة وتطوير وتمكين المجتمع المصري من أجل العودة للحياة الكريمة في جميع ربوع مصر.',
-                    textAlign: TextAlign.right,
-                    style: TextStyle(
-                      fontSize: 16,
-                      height: 1.8,
-                      color: AppColors.tertiaryText,
+                  height: 55,
+                  child: ElevatedButton(
+                    style: ElevatedButton.styleFrom(
+                      backgroundColor: AppColors.primaryText,
+                      shape: RoundedRectangleBorder(
+                        borderRadius: BorderRadius.circular(18),
+                      ),
+                    ),
+                    onPressed: () {
+                      showDialog(
+                        context: context,
+                        builder: (context) {
+                          return AlertDialog(
+                            shape: RoundedRectangleBorder(
+                              borderRadius: BorderRadius.circular(20),
+                            ),
+                            title: const Center(
+                              child: Icon(
+                                Icons.check_circle,
+                                color: Colors.green,
+                                size: 60,
+                              ),
+                            ),
+                            content: const Text(
+                              'تم تعديل البيانات بنجاح',
+                              textAlign: TextAlign.center,
+                              style: TextStyle(
+                                fontSize: 18,
+                                fontWeight: FontWeight.bold,
+                              ),
+                            ),
+                            actionsAlignment: MainAxisAlignment.center,
+                            actions: [
+                              ElevatedButton(
+                                style: ElevatedButton.styleFrom(
+                                  backgroundColor: AppColors.primaryText,
+                                ),
+                                onPressed: () {
+                                  Navigator.pop(context);
+                                },
+                                child: const Text(
+                                  'حسناً',
+                                  style: TextStyle(color: AppColors.fourthText),
+                                ),
+                              ),
+                            ],
+                          );
+                        },
+                      );
+                    },
+                    child: const Text(
+                      'تعديل البيانات',
+                      style: TextStyle(
+                        color: AppColors.fourthText,
+                        fontSize: 18,
+                        fontWeight: FontWeight.bold,
+                      ),
                     ),
                   ),
                 ),
