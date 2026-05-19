@@ -19,7 +19,7 @@ class ProfileView extends StatelessWidget {
               ),
             ],
           ),
-        ),edit 
+        ), 
       ),
     );
   }
