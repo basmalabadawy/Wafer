@@ -36,13 +36,12 @@ class RequestView extends StatelessWidget {
     ];
 
     return Scaffold(
-      backgroundColor: AppColors.logohHaderColor,
+      backgroundColor: AppColors.fourthText,
       body: SafeArea(
         child: Padding(
           padding: const EdgeInsets.symmetric(horizontal: 16),
           child: Column(
             children: [
-              const SizedBox(height: 15),
               const CustomAppBar(
                 title: 'الطلبات المقترحة !',
                 firstIcon: Icons.search,

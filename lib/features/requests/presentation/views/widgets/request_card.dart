@@ -33,7 +33,7 @@ class RequestCard extends StatelessWidget {
         ],
       ),
       child: Column(
-        crossAxisAlignment: CrossAxisAlignment.end,
+        crossAxisAlignment: CrossAxisAlignment.start,
         children: [
           /// Title Row
           Row(
@@ -42,60 +42,25 @@ class RequestCard extends StatelessWidget {
                 radius: 24,
                 backgroundImage: AssetImage('assets/images/test.png'),
               ),
-              const Spacer(),
-              Text(
-                title,
-                textAlign: TextAlign.right,
-                style: Styles.textStyle18,
-              ),
+              SizedBox(width: 10),
+              Text(title, style: Styles.textStyle18),
             ],
           ),
 
           const SizedBox(height: 10),
 
           /// Details
-          Text(
-            "العرض: $description",
-            textAlign: TextAlign.right,
-            style: Styles.textStyle14,
-          ),
+          Text("العرض: $description", style: Styles.textStyle14),
           const SizedBox(height: 6),
-          Text(
-            "· رقم التواصل: $phone",
-            textAlign: TextAlign.right,
-            style: Styles.textStyle14,
-          ),
+          Text("· رقم التواصل: $phone", style: Styles.textStyle14),
           const SizedBox(height: 6),
-          Text(
-            "· الموقع: $location",
-            textAlign: TextAlign.right,
-            style: Styles.textStyle14,
-          ),
+          Text("· الموقع: $location", style: Styles.textStyle14),
 
           const SizedBox(height: 14),
 
           /// Action Buttons
           Row(
             children: [
-              Expanded(
-                child: ElevatedButton(
-                  style: ElevatedButton.styleFrom(
-                    backgroundColor: Colors.red.shade600,
-                    shape: RoundedRectangleBorder(
-                      borderRadius: BorderRadius.circular(12),
-                    ),
-                  ),
-                  onPressed: () {},
-                  child: const Text(
-                    "رفض",
-                    style: TextStyle(
-                      color: AppColors.fourthText,
-                      fontWeight: FontWeight.bold,
-                    ),
-                  ),
-                ),
-              ),
-              const SizedBox(width: 10),
               Expanded(
                 child: ElevatedButton(
                   style: ElevatedButton.styleFrom(
@@ -107,6 +72,26 @@ class RequestCard extends StatelessWidget {
                   onPressed: () {},
                   child: const Text(
                     "قبول",
+                    style: TextStyle(
+                      color: AppColors.fourthText,
+                      fontWeight: FontWeight.bold,
+                    ),
+                  ),
+                ),
+              ),
+
+              const SizedBox(width: 10),
+              Expanded(
+                child: ElevatedButton(
+                  style: ElevatedButton.styleFrom(
+                    backgroundColor: Colors.red.shade600,
+                    shape: RoundedRectangleBorder(
+                      borderRadius: BorderRadius.circular(12),
+                    ),
+                  ),
+                  onPressed: () {},
+                  child: const Text(
+                    "رفض",
                     style: TextStyle(
                       color: AppColors.fourthText,
                       fontWeight: FontWeight.bold,
