@@ -1,7 +1,5 @@
 import 'dart:async';
 import 'package:flutter/material.dart';
-import 'package:wafer/core/utils/styles.dart';
-import 'package:wafer/features/auth/presentation/view/login_screen.dart';
 import 'package:wafer/features/on_board/presentation/view/onborad_view.dart';
 
 class SplashView extends StatefulWidget {
@@ -45,21 +43,7 @@ class _SplashViewState extends State<SplashView> {
             ),
           ],
         ),
-        //
-        // Column(
-        //   crossAxisAlignment: CrossAxisAlignment.center,
-        //   mainAxisAlignment: MainAxisAlignment.center,
-        //   children: [
-        //     Image.asset(
-        //       'assets/images/wafer_logo.png',
-        //       height: MediaQuery.of(context).size.height * 0.3,
-        //       width: double.infinity,
-        //     ),
-        //   ],
-        // ),
       ),
     );
   }
 }
-
-//  وافر ف اللوجو بس مش هتبقي ف النص ب الظبط
