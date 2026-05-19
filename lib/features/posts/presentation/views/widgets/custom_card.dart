@@ -82,31 +82,26 @@ class CustomCard extends StatelessWidget {
         ],
       ),
       child: Column(
-        crossAxisAlignment: CrossAxisAlignment.end,
+        crossAxisAlignment: CrossAxisAlignment.start,
         children: [
           /// Header Row
           Row(
             textDirection: TextDirection.rtl,
             crossAxisAlignment: CrossAxisAlignment.start,
             children: [
-              const Icon(Icons.more_horiz, color: Colors.grey),
-              const SizedBox(width: 10),
               CircleAvatar(
                 radius: 24,
                 backgroundImage: imagePath != null
                     ? NetworkImage(imagePath!)
                     : const AssetImage('assets/images/test.png')
-                        as ImageProvider,
+                          as ImageProvider,
               ),
               const SizedBox(width: 10),
               Expanded(
                 child: Column(
-                  crossAxisAlignment: CrossAxisAlignment.end,
+                  crossAxisAlignment: CrossAxisAlignment.start,
                   children: [
-                    Text(
-                      title,
-                      style: Styles.textStyle18,
-                    ),
+                    Text(title, style: Styles.textStyle18),
                     const SizedBox(height: 3),
                     Text(
                       _formatDate(time),
@@ -162,8 +157,10 @@ class CustomCard extends StatelessWidget {
             Align(
               alignment: Alignment.centerRight,
               child: Container(
-                padding:
-                    const EdgeInsets.symmetric(horizontal: 12, vertical: 4),
+                padding: const EdgeInsets.symmetric(
+                  horizontal: 12,
+                  vertical: 4,
+                ),
                 decoration: BoxDecoration(
                   color: _getStatusColor(status!).withValues(alpha: 0.1),
                   borderRadius: BorderRadius.circular(20),
