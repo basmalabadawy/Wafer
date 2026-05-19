@@ -30,7 +30,9 @@ class OfferCard extends StatelessWidget {
                 CircleAvatar(
                   radius: 18,
                   backgroundColor: Colors.grey.shade200,
-                  child: const Icon(Icons.store),
+                  backgroundImage: offer.productImage != null
+                      ? NetworkImage(offer.productImage!)
+                      : null,
                 ),
                 const SizedBox(width: 10),
                 Expanded(
